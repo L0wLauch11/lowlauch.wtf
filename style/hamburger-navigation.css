@@ -1,0 +1,84 @@
+.hamburger-menu {
+    margin-right: 4px;
+    position: fixed;
+    left: 0px;
+    top: 48px;
+    margin: 16px;
+    padding: 8px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    padding: 0px;
+    width: 320px;
+    border-style: none;
+    box-shadow: 0px 0px 4px var(--color-shadow);
+}
+
+@media only screen and (max-width: 1200px) {
+    .hamburger-menu {
+        margin-left: 0px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        position: inherit;
+        display: block;
+        min-width: 100%;
+    }
+}
+
+.hamburger-side-text {
+    display: inline;
+}
+
+.hamburger-menu-button {
+    display: inline;
+}
+
+.hamburger-menu img {
+    width: 24px;
+}
+
+.hamburger-menu button {
+    background-clip: padding-box;
+    border-color: var(--color-background);
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 0px 16px;
+    border-style: none;
+    background-color: var(--color-background);
+    border-color: var(--color-background-light);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.hamburger-menu button:hover {
+    background-color: var(--color-background-light);
+}
+
+.hamburger-menu button p {
+    color: var(--color-font);
+    display: inline-block;
+    width: 100%;
+    padding-left: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.dropdown-content a {
+    margin: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 4px;
+    padding: 8px 32px;
+    display: block;
+    width: auto;
+}
+
+.dropdown-content a:hover {
+    margin: 8px;
+    text-decoration: none;
+    background-color: var(--color-background-light);
+}
