@@ -32,8 +32,12 @@
 
         <div class="description-box">
             <p>
-            <h3>Über „Corrupted Timelapse!“:</h3>
-            wip
+            <h3>Über „Corrupted Timelapse“!:</h3>
+            In diesem Spiel spielst du ein Quadrat, welches die Zeit verlangsamen kann, indem es stehen bleibt. Man muss versuchen diese Fähigkeit zu seinem Vorteil zu verwenden um die Gegner zu töten.
+            <br><br>
+            Mein erstes Spiel was ich für einen Game-Jam entworfen habe. Außerdem ist „Corrupted Timelapse“ eines der ersten guten Spiele die ich gemacht habe. Insgesamt sind wir mit dem Spiel 9ter Platz von 51 (?) Spielen geworden. Musik ist von meinem Freund Paul und mein Bruder hat einige Grafiken gemacht.
+            <br><br>
+            Verfügbar auf Windows.
             </p>
         </div>
 

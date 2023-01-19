@@ -27,12 +27,17 @@
         include "$root/games-hamburger-navigation.html";
         ?>
         <h1><a href="https://lowlauch.itch.io/after-dark">After Dark<img src="/img/fancy-link.svg"
-                    class="fancy-link-icon dark-invert"></a> (2020)</h1>
+                    class="fancy-link-icon dark-invert"></a> (2021)</h1>
 
         <div class="description-box">
             <p>
             <h3>Über „After Dark“:</h3>
-            wip
+            „After Dark“ ist ein 2D Jump and Run. Immer wenn man stirbt, wird eine Lichtquelle auf der Todesposition in der Dunkelheit erschaffen und so muss man sich langsam mit seinem Charakter durch die Level vorantasten.
+            <br><br>
+            Das zweite Spiel was je ich für einen Game-Jam gemacht habe. (Wir reden nicht über „ <a target="_blank" href="https://lowlauch.itch.io/lucky-diggah">Lucky diggah<img src="/img/fancy-link.svg"
+                    class="fancy-link-icon dark-invert"></a>“). Musik mal wieder von meinem Freund Paul.
+            <br><br>
+            Für Windows (und Browser!) verfügbar.
             </p>
         </div>
 
