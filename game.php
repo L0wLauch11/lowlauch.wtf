@@ -10,7 +10,7 @@
     $root = $_SERVER["DOCUMENT_ROOT"];
 
     include "$root/head-data-extra.html";
-    include "$root/games-hamburger-navigation.html";
+    include "$root/games-hamburger-navigation.php";
 
     // Init game page
     if (!isset($_GET['name']))
@@ -20,7 +20,7 @@
     $gameMetadata = parse_ini_file("$gameDirectory/metadata.ini");
     $gameDescription = file_get_contents("$gameDirectory/description.html");
 
-    function meta($metadataName)
+    function gameMeta($metadataName)
     {
         global $gameMetadata;
         print $gameMetadata[$metadataName];
@@ -28,7 +28,7 @@
 
     ?>
 
-    <title>🎮 <?php meta('game_name'); ?></title>
+    <title>🎮 <?php gameMeta('game_name'); ?></title>
 </head>
 
 <body>
@@ -39,12 +39,12 @@
     </header>
 
     <div class="container">
-        <h1><a href=<?php meta('game_link');?>><?php meta('game_name'); ?><img
-                    src="/img/fancy-link.svg" class="fancy-link-icon dark-invert"></a> (<?php meta('game_year'); ?>)</h1>
+        <h1><a href=<?php gameMeta('game_link');?>><?php gameMeta('game_name'); ?><img
+                    src="/img/fancy-link.svg" class="fancy-link-icon dark-invert"></a> (<?php gameMeta('game_year'); ?>)</h1>
 
         <div class="description-box">
             <p>
-            <h3>Über „<?php meta('game_name'); ?>“:</h3>
+            <h3>Über „<?php gameMeta('game_name'); ?>“:</h3>
             <?php print $gameDescription; ?>
             </p>
         </div>
@@ -68,8 +68,8 @@
         </div>
 
         <h2>Herunterladen!</h2>
-        <h3><a href=<?php meta('game_direct_download'); ?> class="button">
-                <?php meta('direct_download_button_text'); ?><img src="/img/fancy-link.svg" class="fancy-link-icon"
+        <h3><a href=<?php gameMeta('game_direct_download'); ?> class="button">
+                <?php gameMeta('direct_download_button_text'); ?><img src="/img/fancy-link.svg" class="fancy-link-icon"
                     style="filter: invert(1);">
             </a></h3>
     </div>
