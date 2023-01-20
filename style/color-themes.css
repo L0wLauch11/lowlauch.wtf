@@ -6,6 +6,8 @@
     --color-background-light: rgb(235, 235, 235);
     --color-highlight: #1f6feb;
     --color-button: white;
+
+    
 }
 
 [data-theme="dark"] {
