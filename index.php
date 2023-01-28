@@ -22,10 +22,16 @@
     </header>
 
     <div class="container">
-        <center><h1>Christoph, wie er in der Luft sitzt.</h1></center>
+        <div style="text-align: center;"><h1>Christoph, wie er in der Luft sitzt.</h1></div>
         <img src="/img/home/weepa_sitzt_in_der_luft.png" alt="" srcset=""
             style="display: block; margin-left: auto; margin-right: auto; border-radius: 8px; max-width: 100%; max-height: 100%;">
     </div>
+
+    <footer>
+        <?php
+        include "$root/footer.html";
+        ?>
+    </footer>
 </body>
 
 </html>

@@ -10,13 +10,18 @@
     $root = $_SERVER["DOCUMENT_ROOT"];
 
     include "$root/head-data-extra.html";
-    include "$root/games-hamburger-navigation.php";
 
     // Init game page
     if (!isset($_GET['name']))
         return;
 
-    $gameDirectory = "$root/games/" . $_GET['name'];
+    $gameCodename = $_GET['name'];
+    $gameDirectory = "$root/games/" . $gameCodename;
+    if (!is_dir($gameDirectory)) {
+        $gameCodename = "oh-no"; // The folder oh-no to exist
+        $gameDirectory = "$root/games/" . $gameCodename;
+    }
+
     $gameMetadata = parse_ini_file("$gameDirectory/metadata.ini");
     $gameDescription = file_get_contents("$gameDirectory/description.html");
 
@@ -28,23 +33,36 @@
 
     ?>
 
-    <title>🎮 <?php gameMeta('game_name'); ?></title>
+    <link rel="stylesheet" href="style/image-viewer.css">
+    <script src="js/image-viewer.js" defer></script>
+
+    <title>🎮
+        <?php gameMeta('game_name'); ?>
+    </title>
 </head>
 
 <body>
     <header>
-        <?php
-        include "$root/navigation.html";
-        ?>
+        <?php include "$root/navigation.html"; ?>
     </header>
 
     <div class="container">
-        <h1><a href=<?php gameMeta('game_link');?>><?php gameMeta('game_name'); ?><img
-                    src="/img/fancy-link.svg" class="fancy-link-icon dark-invert"></a> (<?php gameMeta('game_year'); ?>)</h1>
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <?php include "$root/games-hamburger-navigation.php"; ?>
+
+        <h1><a href=<?php gameMeta('game_link'); ?>><?php gameMeta('game_name'); ?><img src="/img/fancy-link.svg"
+                    class="fancy-link-icon dark-invert"></a> (<?php gameMeta('game_year'); ?>)
+        </h1>
 
         <div class="description-box">
             <p>
-            <h3>Über „<?php gameMeta('game_name'); ?>“:</h3>
+            <h3>Über „<?php gameMeta('game_name'); ?>“:
+            </h3>
             <?php print $gameDescription; ?>
             </p>
         </div>
@@ -59,9 +77,10 @@
             $files = array();
             foreach (scandir("$directory") as $file) {
                 $fileName = basename("$directory/$file");
+                $imageSource = "games/" . $gameCodename . "/screenshots/$fileName";
 
                 if ($file !== '.' && $file !== '..') {
-                    echo "<img src='games/" . $_GET['name'] . "/screenshots/$fileName'>";
+                    echo "<img class='img-clickable' src='$imageSource'>";
                 }
             }
             ?>
