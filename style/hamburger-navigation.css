@@ -5,11 +5,11 @@
     top: 48px;
     margin: 16px;
     padding: 8px;
-    background-color: var(--color-background);
+    background-color: var(--color-background-light);
     border-radius: 8px;
     padding: 0px;
     width: 320px;
-    box-shadow: 0px 0px 4px var(--color-shadow);
+    /*box-shadow: 0px 0px 4px var(--color-shadow);*/
    
     z-index: 1;
 }
@@ -44,8 +44,8 @@
     border-radius: 8px;
     padding: 0px 16px;
     border-style: none;
-    background-color: var(--color-background);
-    border-color: var(--color-background-light);
+    background-color: var(--color-background-light);
+    /*border-color: var(--color-background-light);*/
     display: flex;
     width: 100%;
     align-items: center;
@@ -53,7 +53,7 @@
 }
 
 .hamburger-menu button:hover {
-    background-color: var(--color-background-light);
+    box-shadow: 0px 0px 4px var(--color-shadow);
 }
 
 .hamburger-menu button p {
@@ -79,5 +79,5 @@
 .dropdown-content a:hover {
     margin: 4px 20px;
     text-decoration: none;
-    background-color: var(--color-background-light);
+    background-color: var(--color-hover);
 }

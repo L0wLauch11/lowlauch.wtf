@@ -46,8 +46,8 @@ body {
 .screenshot-box img {
     float: left;
     width: 22%;
-    padding: 4px;
-    border-radius: 16px;
+    padding: 2px 4px;
+    border-radius: 12px;
     float: none;
 }
 
@@ -118,7 +118,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0px;
-    background-color: var(--color-background);
+    background-color: var(--color-background-light);
     z-index: 1;
 }
 
