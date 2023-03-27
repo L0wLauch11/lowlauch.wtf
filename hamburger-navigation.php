@@ -27,7 +27,13 @@
         
             $entry = "<h3><a href='/site?type=$folder&name=$directoryName'>$name<img src='/img/fancy-link.svg' class='fancy-link-icon dark-invert'></a></h3>";
 
-            $entries["$year"] = $entry;
+            $ind = "$year";
+            while ($entries["$ind"] != "") {
+                $ind .= "+";
+            }
+            $entries[$ind] = $entry;
+            
+
             array_push($yearsOrder, $year);
         }
 

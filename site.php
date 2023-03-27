@@ -125,6 +125,7 @@
             $direct_download_button_text<img src='/img/fancy-link.svg' class='fancy-link-icon'
             style='filter: invert(1);'>
             </a></h3>";
+        
         ?>
 
 

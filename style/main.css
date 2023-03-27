@@ -75,6 +75,20 @@ h2 {
     padding-top: 32px;
 }
 
+.theme-switch-wrapper {
+    color: var(--color-font);
+    text-decoration: none;
+    vertical-align: middle;
+    transition: 0.3s;
+    font-size: 18px;
+    padding: 3px 8px 0px 8px;
+}
+
+.theme-switch-wrapper:hover {
+    background-color: var(--color-hover);
+    border-radius: 8px;
+}
+
 .theme-switch {
     vertical-align: middle;
 }

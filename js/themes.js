@@ -1,43 +1,34 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
 if (getCookie("darkMode") == "true") {
-    switchDarkMode();
+    switchTheme("dark", "/img/moon.svg", "filter: invert(1);");
+    toggleSwitch.checked = true;
 }
 
-function switchTheme(e) {
+function switchThemeButton(e) {
     if (e.target.checked) {
-        switchDarkMode();
+        // Dark mode
+        switchTheme("dark", "/img/moon.svg", "filter: invert(1);");
     }
     else {
-        switchLightMode();
+        // Light mode
+        switchTheme("light", "/img/sun.svg", "filter: invert(0);");
     }    
 
     document.cookie = "darkMode=" + e.target.checked + "; SameSite=None; Secure";
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+toggleSwitch.addEventListener('change', switchThemeButton, false);
 
-function switchDarkMode() {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('theme-switch-image').setAttribute("src", "/img/moon.svg");
-    document.getElementById('theme-switch-image').setAttribute("style", "filter: invert(1);");
-
-    let documentsToInvert = document.getElementsByClassName('dark-invert');
-    for (let i = 0; i < documentsToInvert.length; i++)
-    {
-        documentsToInvert[i].setAttribute("style", "filter: invert(1);");
-    }
-}
-
-function switchLightMode() {
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.getElementById('theme-switch-image').setAttribute("src", "/img/sun.svg");
-    document.getElementById('theme-switch-image').setAttribute("style", "filter: invert(0);");
+function switchTheme(themeName, themeIconSrc, themeImageFilter) {
+    document.documentElement.setAttribute('data-theme', themeName);
+    document.getElementById('theme-switch-image').setAttribute("src", themeIconSrc);
+    document.getElementById('theme-switch-image').setAttribute("style", themeImageFilter);
     
     let documentsToInvert = document.getElementsByClassName('dark-invert');
     for (let i = 0; i < documentsToInvert.length; i++)
     {
-        documentsToInvert[i].setAttribute("style", "filter: invert(0);");
+        documentsToInvert[i].setAttribute("style", themeImageFilter);
     }
 }
 
