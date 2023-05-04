@@ -1,0 +1,52 @@
+.socials-card {
+    margin-right: 24px;
+}
+
+.socials-card ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.socials-card a li {
+    background-color: var(--color-background-light);
+    margin: 16px;
+    margin-right: 8px;
+    margin-left: 0px;
+    list-style: none;
+    display: inline-block;
+    width: 25%;
+    padding: 0px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 0px;
+}
+
+.socials-card a li:hover {
+    background-color: var(--color-highlight);
+    scale: 1.1;
+    box-shadow: 4px 4px 16px var(--color-highlight);
+}
+
+.socials-card a {
+    text-decoration: none;
+    
+}
+
+.socials-card a:hover {
+    color: white;
+}
+
+.socials-card a li img {
+    float: left;
+    width: 39px;
+    padding-top: 16px;
+    padding-right: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+    .socials-card a li {
+        width: auto;
+        height: auto;
+        display: block;
+    }
+}
