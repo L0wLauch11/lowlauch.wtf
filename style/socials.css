@@ -1,24 +1,27 @@
 .socials-card {
-    margin-right: 24px;
+    padding-left: 0px;
 }
 
-.socials-card ul {
-    padding: 0px;
-    margin: 0px;
+.socials-card a ul {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .socials-card a li {
     background-color: var(--color-background-light);
-    margin: 16px;
-    margin-right: 8px;
+
+    margin-bottom: 16px;
+    margin-right: 16px;
     margin-left: 0px;
+    margin-top: 0px;
+    
     list-style: none;
     display: inline-block;
-    width: 25%;
+    width: 27%;
     padding: 0px 16px;
     border-radius: 8px;
     transition: 0.3s;
-    margin-top: 0px;
+    
 }
 
 .socials-card a li:hover {
@@ -39,14 +42,25 @@
 .socials-card a li img {
     float: left;
     width: 39px;
+    height: 39px;
     padding-top: 16px;
     padding-right: 8px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
+    .socials-card {
+        width: 100%;
+    }
+
     .socials-card a li {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-grow: 1;
         width: auto;
-        height: auto;
-        display: block;
+        margin-right: 0px;
+    }
+
+    .socials-card a li:hover {
+        scale: 1.025;
     }
 }

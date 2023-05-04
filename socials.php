@@ -50,7 +50,7 @@
             <a target="_blank" href="https://twitter.com/LowLauch">
                 <li>
                     <img src="img/socials/twitter.png">
-                    <p><b>Twitter</b></b>
+                    <p><b>Twitter</b>
                         <br>Unnötig
                     </p>
                 </li>
@@ -67,9 +67,8 @@
 
             <a target="_blank" href="https://instagram.com/lowlauch">
                 <li>
-
                     <img src="img/socials/insta.png">
-                    <p><b>Instagram</b></b>
+                    <p><b>Instagram</b>
                         <br>Inaktiv
                     </p>
                 </li>
