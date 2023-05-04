@@ -2,8 +2,6 @@
 
 body {
     margin: 0px;
-    padding-top: 32px;
-    margin-top: 1rem;
     color: var(--color-font);
     background-color: var(--color-background);
     font-family: 'Sofia Sans', sans-serif;
@@ -104,12 +102,6 @@ h2 {
     }
 }
 
-@media only screen and (max-width: 500px) {
-    body {
-        padding-top: 114px;
-    }
-}
-
 /* Footer style */
 footer {
     box-shadow: 0px 0px 4px var(--color-shadow);
@@ -132,6 +124,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0px;
+    padding-bottom: auto;
     background-color: var(--color-background-light);
     z-index: 1;
 }
@@ -167,4 +160,19 @@ header nav ul li h1 {
     margin-left: 0px;
     display: inline;
     vertical-align: middle;
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        box-shadow: 0px 0px 4px var(--color-shadow);
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        background-color: var(--color-background-light);
+        z-index: 1;
+    }
+
+    nav ul {
+        padding-left: 16px;
+    }
 }

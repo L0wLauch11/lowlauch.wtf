@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="style/socials.css">
 
-    <title>lowlauch</title>
+    <title>Social Media</title>
 </head>
 
 <body>
