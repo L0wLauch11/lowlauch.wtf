@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <?php
@@ -11,7 +11,7 @@
 
     include "$root/head-data-extra.html";
 
-    // Init game page
+    // init game page
     if (!isset($_GET['name']))
         return;
 
@@ -27,17 +27,10 @@
     $metadata = parse_ini_file("$directory/metadata.ini");
     $description = file_get_contents("$directory/description.html");
 
-    function siteMetaPrint($metadataName)
+    function get_site_meta($metadata_name)
     {
         global $metadata;
-        print $metadata[$metadataName];
-        return $metadata[$metadataName];
-    }
-
-    function getSiteMeta($metadataName)
-    {
-        global $metadata;
-        return $metadata[$metadataName];
+        return $metadata[$metadata_name];
     }
 
     ?>
@@ -46,7 +39,7 @@
     <script src="js/image-viewer.js" defer></script>
 
     <title>🎮
-        <?php siteMetaPrint('name'); ?>
+        <?= get_site_meta('name'); ?>
     </title>
 </head>
 
@@ -57,22 +50,17 @@
 
     <div class="container">
 
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImg">
-        </div>
-
         <?php include "$root/hamburger-navigation.php"; ?>
 
-        <h1><a href=<?php siteMetaPrint('link'); ?>><?php siteMetaPrint('name'); ?><img src="/img/fancy-link.svg"
-                    class="fancy-link-icon dark-invert"></a> (<?php siteMetaPrint('year'); ?>)
+        <h1><a href=<?= get_site_meta('link'); ?>><?= get_site_meta('name'); ?><img src="/img/fancy-link.svg"
+                    class="fancy-link-icon dark-invert"></a> (<?= get_site_meta('year'); ?>)
         </h1>
 
         <div class="description-box">
             <p>
-            <h3>Über „<?php siteMetaPrint('name'); ?>“:
+            <h3>Über „<?= get_site_meta('name'); ?>“:
             </h3>
-            <?php print $description; ?>
+            <?= $description; ?>
             </p>
         </div>
 
@@ -91,34 +79,34 @@
                 return true;
             }
 
-            // Show all screenshots in a folder
+            // show all screenshots in a folder
             $directory = "$root/$folder/" . $codename;
-            $screenshotsDir = "$directory/screenshots";
+            $screenshots_dir = "$directory/screenshots";
 
-            if (is_dir_empty($screenshotsDir)) {
+            if (is_dir_empty($screenshots_dir)) {
                 return;
             }
 
             echo '<h2>Screenshots</h2>';
 
             $files = array();
-            foreach (scandir("$screenshotsDir") as $file) {
-                $fileName = basename("$screenshotsDir/$file");
-                $imageSource = "$folder/" . $codename . "/screenshots/$fileName";
+            foreach (scandir("$screenshots_dir") as $file) {
+                $file_name = basename("$screenshots_dir/$file");
+                $image_source = "$folder/" . $codename . "/screenshots/$file_name";
 
                 if ($file !== '.' && $file !== '..') {
-                    echo "<img class='img-clickable' src='$imageSource'>";
+                    echo "<img class='img-clickable' src='$image_source'>";
                 }
             }
             ?>
         </div>
 
         <?php
-        if (getSiteMeta('direct_download') == "")
+        if (get_site_meta('direct_download') == "")
             return;
 
-        $direct_download = getSiteMeta('direct_download');
-        $direct_download_button_text = getSiteMeta('direct_download_button_text');
+        $direct_download = get_site_meta('direct_download');
+        $direct_download_button_text = get_site_meta('direct_download_button_text');
 
         echo '<h2>Herunterladen!</h2>';
         echo "<h3><a href=$direct_download class='button'>

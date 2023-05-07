@@ -16,16 +16,16 @@
 
         $directories = glob("$root/$folder/*", GLOB_ONLYDIR);
         $entries = array();
-        $yearsOrder = array();
+        $years_order = array();
 
         foreach ($directories as $directory) {
-            $directoryName = basename($directory);
+            $directory_name = basename($directory);
 
             $meta = parse_ini_file("$directory/metadata.ini");
             $name = $meta['name'];
             $year = $meta['year']; // used for sorting
         
-            $entry = "<h3><a href='/site?type=$folder&name=$directoryName'>$name<img src='/img/fancy-link.svg' class='fancy-link-icon dark-invert'></a></h3>";
+            $entry = "<h3><a href='/site?type=$folder&name=$directory_name'>$name<img src='/img/fancy-link.svg' class='fancy-link-icon dark-invert'></a></h3>";
 
             $ind = "$year";
             error_reporting(E_ERROR | E_PARSE);
@@ -35,13 +35,13 @@
             $entries[$ind] = $entry;
             
 
-            array_push($yearsOrder, $year);
+            array_push($years_order, $year);
         }
 
-        sort($yearsOrder, SORT_NUMERIC);
-        $sortedEntries = array_replace(array_flip($yearsOrder), $entries);
+        sort($years_order, SORT_NUMERIC);
+        $sorted_entries = array_replace(array_flip($years_order), $entries);
 
-        foreach($sortedEntries as $item) {
+        foreach($sorted_entries as $item) {
             print $item;
         }
         ?>
