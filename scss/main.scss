@@ -73,33 +73,6 @@ h2 {
     padding-top: 32px;
 }
 
-.theme-switch-wrapper {
-    color: var(--color-font);
-    text-decoration: none;
-    vertical-align: middle;
-    transition: 0.3s;
-    font-size: 18px;
-    padding: 3px 8px 0px 8px;
-
-    &:hover {
-        background-color: var(--color-hover);
-        border-radius: 8px;
-    }
-}
-
-.theme-switch {
-    vertical-align: middle;
-
-    input {
-        display: none;
-    }
-}
-
-#theme-switch-image {
-    width: 16px;
-    height: 16px;
-}
-
 @media only screen and (min-width: 600px) {
     #src-link {
         float: right;

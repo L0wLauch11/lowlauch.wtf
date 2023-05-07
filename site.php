@@ -95,7 +95,7 @@
                 $image_source = "$folder/" . $codename . "/screenshots/$file_name";
 
                 if ($file !== '.' && $file !== '..') {
-                    echo "<img class='img-clickable' src='$image_source'>";
+                    echo "<img onclick='changeViewerImage(\"$image_source\")' class='img-clickable' src='$image_source'>";
                 }
             }
             ?>
@@ -109,11 +109,12 @@
         $direct_download_button_text = get_site_meta('direct_download_button_text');
 
         echo '<h2>Herunterladen!</h2>';
-        echo "<h3><a href=$direct_download class='button'>
+        echo "<h3><a href='$direct_download' class='button'>
             $direct_download_button_text<img src='/img/fancy-link.svg' class='fancy-link-icon'
             style='filter: invert(1);'>
             </a></h3>";
         
+        // include "image-viewer.html"; does not work yet
         ?>
     </div>
 </body>
