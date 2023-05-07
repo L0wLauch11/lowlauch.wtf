@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+body {
+    margin: 0px;
+    color: var(--color-font);
+    background-color: var(--color-background);
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 64px;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-box {
+    background-color: var(--color-background-light);
+    padding: 16px 32px;
+    border-radius: 8px;
+}
+
+.fancy-link-icon {
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 16px;
+    max-height: 0.8em;
+    min-width: 16px;
+    max-width: 0.8em;
+    top: -8px;
+    display: inline-block;
+}
+
+.screenshot-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    img {
+        float: left;
+        width: 22%;
+        padding: 2px 4px;
+        border-radius: 12px;
+        float: none;
+    }
+}
+
+.button {
+    background-color: var(--color-highlight);
+    border-color: var(--color-highlight);
+    background-clip: padding-box;
+    border-style: none;
+    color: var(--color-button);
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 4px 4px 16px var(--color-highlight);
+    }
+}
+
+a {
+    color: var(--color-font);
+}
+
+h2 {
+    padding-top: 32px;
+}
+
+.theme-switch-wrapper {
+    color: var(--color-font);
+    text-decoration: none;
+    vertical-align: middle;
+    transition: 0.3s;
+    font-size: 18px;
+    padding: 3px 8px 0px 8px;
+
+    &:hover {
+        background-color: var(--color-hover);
+        border-radius: 8px;
+    }
+}
+
+.theme-switch {
+    vertical-align: middle;
+
+    input {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #src-link {
+        float: right;
+        padding-top: 4px;
+    }
+}

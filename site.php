@@ -20,7 +20,7 @@
 
     $directory = "$root/$folder/" . $codename;
     if (!is_dir($directory)) {
-        $codename = "oh-no"; // The folder oh-no to exist
+        $codename = scandir("$root/$folder/")[2];
         $directory = "$root/$folder/" . $codename;
     }
 

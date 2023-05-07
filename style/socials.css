@@ -1,66 +1,56 @@
 .socials-card {
-    padding-left: 0px;
+  padding-left: 0px;
 }
-
-.socials-card a ul {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.socials-card a li {
-    background-color: var(--color-background-light);
-
-    margin-bottom: 16px;
-    margin-right: 16px;
-    margin-left: 0px;
-    margin-top: 0px;
-    
-    list-style: none;
-    display: inline-block;
-    width: 27%;
-    padding: 0px 16px;
-    border-radius: 8px;
-    transition: 0.3s;
-    
-}
-
-.socials-card a li:hover {
-    background-color: var(--color-highlight);
-    scale: 1.1;
-    box-shadow: 4px 4px 16px var(--color-highlight);
-}
-
 .socials-card a {
-    text-decoration: none;
-    
+  text-decoration: none;
 }
-
 .socials-card a:hover {
-    color: white;
+  color: white;
 }
-
+.socials-card a ul {
+  margin-left: auto;
+  margin-right: auto;
+}
+.socials-card a li {
+  background-color: var(--color-background-light);
+  margin-bottom: 16px;
+  margin-right: 16px;
+  margin-left: 0px;
+  margin-top: 0px;
+  list-style: none;
+  display: inline-block;
+  width: 27%;
+  padding: 0px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 .socials-card a li img {
-    float: left;
-    width: 39px;
-    height: 39px;
-    padding-top: 16px;
-    padding-right: 8px;
+  float: left;
+  width: 39px;
+  height: 39px;
+  padding-top: 16px;
+  padding-right: 8px;
+}
+.socials-card a li:hover {
+  background-color: var(--color-highlight);
+  scale: 1.1;
+  box-shadow: 4px 4px 16px var(--color-highlight);
 }
 
 @media only screen and (max-width: 700px) {
-    .socials-card {
-        width: 100%;
-    }
-
-    .socials-card a li {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-grow: 1;
-        width: auto;
-        margin-right: 0px;
-    }
-
-    .socials-card a li:hover {
-        scale: 1.025;
-    }
+  .socials-card {
+    width: 100%;
+  }
+  .socials-card a li {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: auto;
+    margin-right: 0px;
+  }
+  .socials-card:hover {
+    scale: 1.025;
+  }
 }
+
+/*# sourceMappingURL=socials.css.map */

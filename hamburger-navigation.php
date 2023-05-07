@@ -28,6 +28,7 @@
             $entry = "<h3><a href='/site?type=$folder&name=$directoryName'>$name<img src='/img/fancy-link.svg' class='fancy-link-icon dark-invert'></a></h3>";
 
             $ind = "$year";
+            error_reporting(E_ERROR | E_PARSE);
             while ($entries["$ind"] != "") {
                 $ind .= "+";
             }
