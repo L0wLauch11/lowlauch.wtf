@@ -7,49 +7,49 @@
         &:hover {
             color: white;
         }
+    }
 
-        ul {
-            margin-left: auto;
-            margin-right: auto;
-        }
+    ul {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        li {
-            background-color: var(--color-background-light);
+    li {
+        background-color: var(--color-background-light);
+    
+        margin-bottom: 16px;
+        margin-right: 16px;
+        margin-left: 0px;
+        margin-top: 0px;
         
-            margin-bottom: 16px;
-            margin-right: 16px;
-            margin-left: 0px;
-            margin-top: 0px;
-            
-            list-style: none;
-            display: inline-block;
-            width: 27%;
-            padding: 0px 16px;
-            border-radius: 8px;
-            transition: 0.3s;
+        list-style: none;
+        display: inline-block;
+        width: 27%;
+        padding: 0px 16px;
+        border-radius: 8px;
+        transition: 0.3s;
 
-            img {
-                float: left;
-                width: 39px;
-                height: 39px;
-                padding-top: 16px;
-                padding-right: 8px;
-            }
-
-            &:hover {
-                background-color: var(--color-highlight);
-                scale: 1.1;
-                box-shadow: 4px 4px 16px var(--color-highlight);
-            }
+        &:hover {
+            background-color: var(--color-highlight);
+            scale: 1.1;
+            box-shadow: 4px 4px 16px var(--color-highlight);
         }
+    }
+
+    img {
+        float: left;
+        width: 39px;
+        height: 39px;
+        padding-top: 16px;
+        padding-right: 8px;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media (max-width: 700px) {
     .socials-card {
         width: 100%;
 
-        a li {
+        li {
             display: flex;
             flex-wrap: nowrap;
             flex-grow: 1;
