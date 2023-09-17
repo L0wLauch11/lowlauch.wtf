@@ -104,7 +104,7 @@
         <?php
         if (get_site_meta('direct_download') == "")
             return;
-
+        
         $direct_download = get_site_meta('direct_download');
         $direct_download_button_text = get_site_meta('direct_download_button_text');
 
