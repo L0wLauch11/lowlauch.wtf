@@ -11,6 +11,16 @@
 
     <title>lowlauch</title>
 </head>
+
+<style>
+    html {
+        background-image: url('/img/home/background-darker.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: black;
+    }
+</style>
+
 <body>
     <?php
     $games_dir = "$root/games/*";

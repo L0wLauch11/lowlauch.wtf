@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <ul class="socials-card">
             <h1>Meine Sozialen Medien</h1>
