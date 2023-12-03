@@ -17,11 +17,6 @@
 </head>
 
 <body>
-    <header>
-        <?php
-        include "$root/navigation.html";
-        ?>
-    </header>
 
     <div class="container">
         <ul class="socials-card">

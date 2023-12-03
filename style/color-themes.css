@@ -1,19 +1,12 @@
 :root {
-    --color-background: white;
-    --color-font: black;
-    --color-hover: lightgray;
-    --color-shadow: darkgray;
-    --color-background-light: rgb(235, 235, 235);
-    --color-highlight: #1f6feb;
-    --color-button: white;
-}
-
-[data-theme="dark"] {
-    --color-background: #181A1B;
+    --color-background: black;
     --color-font: white;
-    --color-hover: #313537;
+    --color-hover: #0D1A60;
     --color-shadow: black;
-    --color-background-light: #232628;
-    --color-highlight: #1f6feb;
-    --color-button: white;
+    --color-background-light: rgb(25, 25, 25);
+    --color-accent: #1f6feb;
+    --color-button: #0B1533;
+
+    --color-window-border: white;
+    --color-window-titlebar: rgb(25, 25, 25);
 }

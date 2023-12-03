@@ -1,0 +1,56 @@
+.invisible {
+  display: none;
+}
+
+.window {
+  position: absolute;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-window-border);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0px;
+  background-color: black;
+}
+.window .window-titlebar {
+  padding: 6px;
+  padding-left: 0px;
+  padding-bottom: 8px;
+  border-style: solid;
+  border-color: var(--color-window-titlebar);
+  background-color: var(--color-window-titlebar);
+}
+.window .window-titlebar p {
+  padding: 0px;
+  margin: 0px;
+}
+.window .window-titlebar p span {
+  padding: 6px;
+  width: auto;
+  background-color: var(--color-window-titlebar);
+}
+.window .window-titlebar .window-close {
+  float: right;
+  padding-top: 0px;
+  border-color: var(--color-accent);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1px;
+  background-color: var(--color-button);
+  background-clip: padding-box;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: 0.3s;
+  width: 24px;
+  height: 24px;
+}
+.window .window-titlebar .window-close:hover {
+  background-color: var(--color-hover);
+}
+.window iframe {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-background);
+}/*# sourceMappingURL=window.css.map */

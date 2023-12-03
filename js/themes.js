@@ -25,7 +25,7 @@ function switchTheme(themeName, themeIconSrc, themeImageFilter) {
     document.getElementById('theme-switch-image').setAttribute("src", themeIconSrc);
     document.getElementById('theme-switch-image').setAttribute("style", themeImageFilter);
     
-    let documentsToInvert = document.getElementsByClassName('dark-invert');
+    let documentsToInvert = document.getElementsByClassName('invert');
     for (let i = 0; i < documentsToInvert.length; i++)
     {
         documentsToInvert[i].setAttribute("style", themeImageFilter);

@@ -2,3 +2,4 @@ experiments/
 testing.php
 .vscode/
 .vscode/sftp.json
+.htaccess

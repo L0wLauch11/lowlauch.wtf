@@ -44,19 +44,12 @@
 </head>
 
 <body>
-    <header>
-        <?php include "$root/navigation.html"; ?>
-    </header>
-
     <div class="container">
-
-        <?php include "$root/hamburger-navigation.php"; ?>
-
-        <h1><a href=<?= get_site_meta('link'); ?>><?= get_site_meta('name'); ?><img src="/img/fancy-link.svg"
-                    class="fancy-link-icon dark-invert"></a> (<?= get_site_meta('year'); ?>)
+        <h1><a href=<?= get_site_meta('link'); ?> target="_blank"><?= get_site_meta('name'); ?><img src="/img/fancy-link.svg"
+                    class="fancy-link-icon invert"></a> (<?= get_site_meta('year'); ?>)
         </h1>
 
-        <div class="description-box">
+        <div class="description-box accent-border">
             <p>
             <h3>Über „<?= get_site_meta('name'); ?>“:
             </h3>
@@ -95,7 +88,7 @@
                 $image_source = "$folder/" . $codename . "/screenshots/$file_name";
 
                 if ($file !== '.' && $file !== '..') {
-                    echo "<img onclick='changeViewerImage(\"$image_source\")' class='img-clickable' src='$image_source'>";
+                    echo "<img onclick='changeViewerImage(\"$image_source\")' class='img-clickable accent-border' src='$image_source'>";
                 }
             }
             ?>

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
-
 body {
     margin: 0px;
     color: var(--color-font);
     background-color: var(--color-background);
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: monospace;
+    font-size: 12px;
 }
 
 .container {
@@ -19,8 +18,7 @@ body {
 
 .description-box {
     background-color: var(--color-background-light);
-    padding: 16px 32px;
-    border-radius: 8px;
+    padding: 8px 24px;
 }
 
 .fancy-link-icon {
@@ -42,26 +40,29 @@ body {
 
     img {
         float: left;
-        width: 22%;
-        padding: 2px 4px;
-        border-radius: 12px;
+        width: 24%;
+        margin: 0px 1px;
         float: none;
     }
 }
 
+.accent-border, .button {
+    border-color: var(--color-accent);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1px;
+}
+
 .button {
-    background-color: var(--color-highlight);
-    border-color: var(--color-highlight);
+    background-color: var(--color-button);
     background-clip: padding-box;
-    border-style: none;
-    color: var(--color-button);
+    color: var(--color-text);
     text-decoration: none;
-    border-radius: 8px;
     padding: 12px 24px;
     transition: 0.3s;
 
     &:hover {
-        box-shadow: 4px 4px 16px var(--color-highlight);
+        background-color: var(--color-hover);
     }
 }
 
@@ -78,4 +79,8 @@ h2 {
         float: right;
         padding-top: 4px;
     }
+}
+
+.invert {
+    filter: invert(1);
 }
